@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+build/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+pip.log
+
+# Test files and temporary outputs
+test_*.py
+test_files/
+temp/
+uploads/
+downloads/
+*.mp4
+*.wav
+*.mp3
+*.mkv
+*.zip
+*.jpg
+*.png
+
+# Flask
+instance/
+.webassets-cache
+
+# Misc
+.cache/
