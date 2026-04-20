@@ -148,8 +148,11 @@ def get_ydl_opts(format_type='mp4', quality='best'):
         'no_warnings': False,
         'default_search': 'none',
         'geo_bypass': True,
+        'geo_bypass_country': 'US',
         'socket_timeout': 30,
         'skip_unavailable_fragments': True,
+        'allow_unplayable_formats': True,
+        'youtube_include_dash_manifest': True,
         # Realistic browser headers to avoid bot detection
         'http_headers': {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -160,8 +163,12 @@ def get_ydl_opts(format_type='mp4', quality='best'):
         'extractor_args': {
             'youtube': {
                 'lang': ['en'],
+                'player_client': ['web'],
             }
         },
+        # Retry on network errors
+        'retries': 3,
+        'socket_timeout': 30,
     }
 
     if format_type == 'mp3':
@@ -225,6 +232,11 @@ def get_video_info():
             'no_warnings': True,
             'default_search': 'none',
             'extract_flat': False,
+            'geo_bypass': True,
+            'geo_bypass_country': 'US',
+            'allow_unplayable_formats': True,
+            'youtube_include_dash_manifest': True,
+            'retries': 3,
             # Add realistic browser headers
             'http_headers': {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -238,6 +250,7 @@ def get_video_info():
             'extractor_args': {
                 'youtube': {
                     'lang': ['en'],
+                    'player_client': ['web'],
                 }
             },
         }
