@@ -799,6 +799,25 @@ def health_check():
     return jsonify({'status': 'healthy', 'message': 'Backend is running'}), 200
 
 
+# Serve favicon/icon directly
+@app.route('/black_tool.png')
+def serve_icon():
+    """Serve the favicon"""
+    try:
+        icon_path = os.path.join(app.static_folder, 'black_tool.png')
+        if os.path.exists(icon_path):
+            return send_file(icon_path, mimetype='image/png')
+        else:
+            print(f"[ERROR] Icon not found at {icon_path}")
+            print(f"[DEBUG] Static folder: {app.static_folder}")
+            print(f"[DEBUG] Static folder exists: {os.path.exists(app.static_folder)}")
+            print(f"[DEBUG] Contents: {os.listdir(app.static_folder) if os.path.exists(app.static_folder) else 'N/A'}")
+            return 'Icon not found', 404
+    except Exception as e:
+        print(f"[ERROR] Error serving icon: {e}")
+        return f'Error: {str(e)}', 500
+
+
 # Serve React app
 @app.route('/')
 def serve_index():
