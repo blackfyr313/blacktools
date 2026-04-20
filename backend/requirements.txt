@@ -3,6 +3,7 @@ flask>=3.0.0
 flask-cors>=4.0.0
 python-dotenv>=1.0.0
 setuptools>=65.0.0
+gunicorn>=23.0.0
 
 # Desktop App
 pywebview>=5.0.0
