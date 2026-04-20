@@ -148,6 +148,11 @@ def get_ydl_opts(format_type='mp4', quality='best'):
         'no_warnings': False,
         'default_search': 'none',
         'geo_bypass': True,
+        # Add headers to look like a real browser and bypass bot detection
+        'http_headers': {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+            'Accept-Language': 'en-US,en;q=0.9',
+        },
     }
 
     if format_type == 'mp3':
@@ -211,6 +216,11 @@ def get_video_info():
             'no_warnings': True,
             'default_search': 'none',
             'extract_flat': False,
+            # Add headers to look like a real browser
+            'http_headers': {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+                'Accept-Language': 'en-US,en;q=0.9',
+            },
         }
 
         with YoutubeDL(ydl_opts) as ydl:
@@ -737,6 +747,11 @@ def download_social_media():
             'default_search': 'none',
             'outtmpl': os.path.join(TEMP_DIR, '%(title)s.%(ext)s'),
             'progress_hooks': [progress_hook],
+            # Add headers to look like a real browser
+            'http_headers': {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+                'Accept-Language': 'en-US,en;q=0.9',
+            },
         }
         
         with YoutubeDL(ydl_opts) as ydl:
