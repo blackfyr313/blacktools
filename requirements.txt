@@ -1,0 +1,19 @@
+# Core Framework
+flask>=3.0.0
+flask-cors>=4.0.0
+python-dotenv>=1.0.0
+setuptools>=65.0.0
+
+# Desktop App
+pywebview>=5.0.0
+pyinstaller>=6.0.0
+
+# Media Processing
+yt-dlp>=2025.12.25
+pillow>=10.0.0
+pydub>=0.25.1
+librosa>=0.10.0
+noisereduce>=3.0.0
+
+# Utilities
+numpy>=1.24.0
