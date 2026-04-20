@@ -70,7 +70,15 @@ except ImportError as e:
 
 print("="*70 + "\n")
 
-app = Flask(__name__, static_folder='../frontend/dist', static_url_path='')
+# Configure Flask with absolute path to static files
+app_dir = os.path.dirname(os.path.abspath(__file__))
+static_folder = os.path.join(os.path.dirname(app_dir), 'frontend', 'dist')
+
+print(f"[DEBUG] App dir: {app_dir}")
+print(f"[DEBUG] Static folder: {static_folder}")
+print(f"[DEBUG] Static folder exists: {os.path.exists(static_folder)}")
+
+app = Flask(__name__, static_folder=static_folder, static_url_path='')
 CORS(app)
 
 # Configuration
