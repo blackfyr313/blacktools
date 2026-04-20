@@ -148,10 +148,19 @@ def get_ydl_opts(format_type='mp4', quality='best'):
         'no_warnings': False,
         'default_search': 'none',
         'geo_bypass': True,
-        # Add headers to look like a real browser and bypass bot detection
+        'socket_timeout': 30,
+        'skip_unavailable_fragments': True,
+        # Realistic browser headers to avoid bot detection
         'http_headers': {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
             'Accept-Language': 'en-US,en;q=0.9',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Referer': 'https://www.youtube.com/',
+        },
+        'extractor_args': {
+            'youtube': {
+                'lang': ['en'],
+            }
         },
     }
 
@@ -216,10 +225,20 @@ def get_video_info():
             'no_warnings': True,
             'default_search': 'none',
             'extract_flat': False,
-            # Add headers to look like a real browser
+            # Add realistic browser headers
             'http_headers': {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
                 'Accept-Language': 'en-US,en;q=0.9',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Referer': 'https://www.youtube.com/',
+            },
+            # Additional options to bypass bot detection
+            'socket_timeout': 30,
+            'skip_unavailable_fragments': True,
+            'extractor_args': {
+                'youtube': {
+                    'lang': ['en'],
+                }
             },
         }
 
@@ -747,10 +766,14 @@ def download_social_media():
             'default_search': 'none',
             'outtmpl': os.path.join(TEMP_DIR, '%(title)s.%(ext)s'),
             'progress_hooks': [progress_hook],
-            # Add headers to look like a real browser
+            'socket_timeout': 30,
+            'skip_unavailable_fragments': True,
+            # Realistic browser headers
             'http_headers': {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
                 'Accept-Language': 'en-US,en;q=0.9',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Referer': 'https://www.youtube.com/',
             },
         }
         
