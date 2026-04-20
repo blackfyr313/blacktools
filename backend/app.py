@@ -40,33 +40,33 @@ from yt_dlp.utils import DownloadError
 # Media processing libraries
 try:
     from PIL import Image
-    print("✓ PIL (Pillow) imported successfully")
+    print("[OK] PIL (Pillow) imported successfully")
 except ImportError as e:
-    print(f"✗ Warning: PIL not available: {e}")
+    print(f"[ERROR] Warning: PIL not available: {e}")
 
 try:
     from pydub import AudioSegment
-    print("✓ pydub imported successfully")
+    print("[OK] pydub imported successfully")
 except ImportError as e:
-    print(f"✗ Warning: pydub not available: {e}")
+    print(f"[ERROR] Warning: pydub not available: {e}")
 
 try:
     import librosa
-    print("✓ librosa imported successfully")
+    print("[OK] librosa imported successfully")
 except ImportError as e:
-    print(f"✗ Warning: librosa not available: {e}")
+    print(f"[ERROR] Warning: librosa not available: {e}")
 
 try:
     import noisereduce as nr
-    print("✓ noisereduce imported successfully")
+    print("[OK] noisereduce imported successfully")
 except ImportError as e:
-    print(f"✗ Warning: noisereduce not available: {e}")
+    print(f"[ERROR] Warning: noisereduce not available: {e}")
 
 try:
     import numpy as np
-    print("✓ numpy imported successfully")
+    print("[OK] numpy imported successfully")
 except ImportError as e:
-    print(f"✗ Warning: numpy not available: {e}")
+    print(f"[ERROR] Warning: numpy not available: {e}")
 
 print("="*70 + "\n")
 
