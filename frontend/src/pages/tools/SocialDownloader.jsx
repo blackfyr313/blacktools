@@ -63,7 +63,7 @@ export default function SocialDownloader() {
     <div style={{ backgroundColor: 'var(--bg-primary)' }} className="min-h-screen pt-24 px-4">
       <div className="max-w-2xl mx-auto">
       <div className="text-center mb-12 slideInFromTop">
-        <h1 className="text-5xl font-bold mb-4 glow-text">ðŸ“¥ Social Downloader</h1>
+        <h1 className="text-5xl font-bold mb-4 glow-text">📥 Social Downloader</h1>
         <p style={{ color: 'var(--text-secondary)' }} className="text-lg">Download videos from Instagram, TikTok, Facebook, Twitter</p>
       </div>
 
@@ -133,12 +133,12 @@ export default function SocialDownloader() {
       </div>
 
       <div className="glass rounded-2xl p-6 slideInFromRight">
-        <h3 className="font-semibold text-slate-300 mb-3">ðŸ’¡ Supported Platforms</h3>
+        <h3 className="font-semibold text-slate-300 mb-3">💡 Supported Platforms</h3>
         <ul className="space-y-2 text-slate-400 text-sm">
-          <li>ðŸ“¸ Instagram: Posts, Reels, Stories</li>
-          <li>ðŸŽµ TikTok: Videos and sounds</li>
-          <li>ðŸ‘¥ Facebook: Videos and content</li>
-          <li>ðŸ¦ Twitter: Videos and media</li>
+          <li>📸 Instagram: Posts, Reels, Stories</li>
+          <li>🎵 TikTok: Videos and sounds</li>
+          <li>👥 Facebook: Videos and content</li>
+          <li>🐦 Twitter: Videos and media</li>
         </ul>
       </div>
 

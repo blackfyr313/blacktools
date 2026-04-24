@@ -69,7 +69,7 @@ export default function NoiseRemover() {
     <div style={{ backgroundColor: 'var(--bg-primary)' }} className="min-h-screen pt-24 px-4">
       <div className="max-w-2xl mx-auto">
       <div className="text-center mb-12 slideInFromTop">
-        <h1 className="text-5xl font-bold mb-4 glow-text">ðŸ”‡ Noise Remover</h1>
+        <h1 className="text-5xl font-bold mb-4 glow-text">🔇 Noise Remover</h1>
         <p style={{ color: 'var(--text-secondary)' }} className="text-lg">Remove background noise from audio</p>
       </div>
 
@@ -86,7 +86,7 @@ export default function NoiseRemover() {
               disabled={loading}
             />
             <label htmlFor="file-input" className="cursor-pointer">
-              <div className="text-4xl mb-2">ðŸŽ™ï¸</div>
+              <div className="text-4xl mb-2">🎙️</div>
               <p style={{ color: 'var(--text-primary)' }} className="font-semibold">{file ? file.name : 'Click to select audio'}</p>
               <p style={{ color: 'var(--text-secondary)' }} className="text-sm mt-1">MP3, WAV, M4A, OGG</p>
             </label>

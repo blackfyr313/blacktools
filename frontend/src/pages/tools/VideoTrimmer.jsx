@@ -86,7 +86,7 @@ export default function VideoTrimmer() {
               disabled={loading}
             />
             <label htmlFor="file-input" className="cursor-pointer">
-              <div className="text-4xl mb-2">ðŸŽ¬</div>
+              <div className="text-4xl mb-2">🎬</div>
               <p style={{ color: 'var(--text-primary)' }} className="font-semibold">{file ? file.name : 'Click to select video'}</p>
               <p style={{ color: 'var(--text-secondary)' }} className="text-sm mt-1">MP4, MKV, AVI, WebM</p>
             </label>

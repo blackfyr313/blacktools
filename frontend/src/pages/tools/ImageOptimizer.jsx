@@ -62,7 +62,7 @@ export default function ImageOptimizer() {
     <div style={{ backgroundColor: 'var(--bg-primary)' }} className="min-h-screen pt-24 px-4">
       <div className="max-w-2xl mx-auto">
       <div className="text-center mb-12 slideInFromTop">
-        <h1 className="text-5xl font-bold mb-4 glow-text">ðŸ–¼ï¸ Image Optimizer</h1>
+        <h1 className="text-5xl font-bold mb-4 glow-text">🖼️ Image Optimizer</h1>
         <p style={{ color: 'var(--text-secondary)' }} className="text-lg">Compress images while maintaining quality</p>
       </div>
 
@@ -79,7 +79,7 @@ export default function ImageOptimizer() {
               disabled={loading}
             />
             <label htmlFor="file-input" className="cursor-pointer">
-              <div className="text-4xl mb-2">ðŸ“</div>
+              <div className="text-4xl mb-2">📁</div>
               <p style={{ color: 'var(--text-primary)' }} className="font-semibold">{file ? file.name : 'Click to select image'}</p>
               <p style={{ color: 'var(--text-secondary)' }} className="text-sm mt-1">PNG, JPG, WebP</p>
             </label>

@@ -72,7 +72,7 @@ export default function BatchResizer() {
     <div style={{ backgroundColor: 'var(--bg-primary)' }} className="min-h-screen pt-24 px-4">
       <div className="max-w-2xl mx-auto">
       <div className="text-center mb-12 slideInFromTop">
-        <h1 className="text-5xl font-bold mb-4 glow-text">ðŸ“ Batch Resizer</h1>
+        <h1 className="text-5xl font-bold mb-4 glow-text">🖼️ Batch Resizer</h1>
         <p style={{ color: 'var(--text-secondary)' }} className="text-lg">Resize multiple images at once</p>
       </div>
 
@@ -90,7 +90,7 @@ export default function BatchResizer() {
               disabled={loading}
             />
             <label htmlFor="file-input" className="cursor-pointer">
-              <div className="text-4xl mb-2">ðŸ–¼ï¸</div>
+              <div className="text-4xl mb-2">🖼️</div>
               <p style={{ color: 'var(--text-primary)' }} className="font-semibold">Click to select images</p>
               <p style={{ color: 'var(--text-secondary)' }} className="text-sm mt-1">Select multiple images to resize</p>
             </label>

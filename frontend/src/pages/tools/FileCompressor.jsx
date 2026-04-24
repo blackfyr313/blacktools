@@ -67,7 +67,7 @@ export default function FileCompressor() {
     <div style={{ backgroundColor: 'var(--bg-primary)' }} className="min-h-screen pt-24 px-4">
       <div className="max-w-2xl mx-auto">
       <div className="text-center mb-12 slideInFromTop">
-        <h1 className="text-5xl font-bold mb-4 glow-text">ðŸ“¦ File Compressor</h1>
+        <h1 className="text-5xl font-bold mb-4 glow-text">📦 File Compressor</h1>
         <p style={{ color: 'var(--text-secondary)' }} className="text-lg">Create ZIP archives from multiple files</p>
       </div>
 
@@ -84,7 +84,7 @@ export default function FileCompressor() {
               disabled={loading}
             />
             <label htmlFor="file-input" className="cursor-pointer">
-              <div className="text-4xl mb-2">ðŸ“‚</div>
+              <div className="text-4xl mb-2">📁</div>
               <p style={{ color: 'var(--text-primary)' }} className="font-semibold">Click to select files</p>
               <p style={{ color: 'var(--text-secondary)' }} className="text-sm mt-1">Select any files to compress</p>
             </label>
